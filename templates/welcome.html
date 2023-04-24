@@ -10,16 +10,13 @@
     <title>Title</title>
 </head>
 <body>
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <ul class="nav navbar-nav">
-            <li><a class="active">Home</a></li>
-            <li><a href="find_a_buddy.html">Find Your Buddy</a></li>
-            <li><a href="find_a_group.html">Find Your Group</a></li>
-            <li><a href="my_buddies.html">My Buddies</a></li>
-        </ul>
-    </div>
-</nav>
+<ul class="container">
+    <li><a href="{{ url_for('welcome') }}">Home</a></li>
+    <li><a href="{{ url_for('find_a_buddy') }}">Find a Buddy</a></li>
+    <li><a href="{{ url_for('find_a_group') }}">Find a Group</a></li>
+    <li><a href="{{ url_for('my_buddies') }}">My Buddies</a></li>
+</ul>
+
 <div class="container">
     <p>Welcome {{ first_name }}! </p>
     <p>Please click on <b>Find a Buddy</b>, if you want to find a buddy to work with.</p>

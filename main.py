@@ -39,6 +39,18 @@ def welcome():
         db.session.commit()
     return render_template('welcome.html', first_name=first_name)
 
+@app.route('/find_a_buddy')
+def find_a_buddy():
+    return render_template('find_a_buddy.html')
+
+@app.route('/find_a_group')
+def find_a_group():
+    return render_template('find_a_group.html')
+
+@app.route('/my_buddies')
+def my_buddies():
+    return render_template('my_buddies.html')
+
 if __name__ == '__main__':
     app.debug = True
     ip = '127.0.0.1'
