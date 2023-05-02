@@ -1,28 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/index.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <title>Title</title>
-</head>
-<body>
-<ul class="container">
-    <li><a href="{{ url_for('welcome') }}">Home</a></li>
-    <li><a href="{{ url_for('find_a_buddy') }}">Find a Buddy</a></li>
-    <li><a href="{{ url_for('find_a_group') }}">Find a Group</a></li>
-    <li><a href="{{ url_for('my_buddies') }}">My Buddies</a></li>
-</ul>
-
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-default" style="background-color: #7a00b8; border: 5px; border-radius: 0px;"">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">ECU Study Buddy</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a href="{{ url_for('find_your_buddy') }}">Find a Buddy</a></li>
+        <li><a href="{{ url_for('find_your_group') }}">Find a Group</a></li>
+        <li><a href="{{ url_for('my_buddies') }}">My Buddies</a></li>
+    </ul>
+</nav>
 <div class="container">
-    <p>Welcome {{ first_name }}! </p>
-    <p>Please click on <b>Find a Buddy</b>, if you want to find a buddy to work with.</p>
-    <p>Please click on <b>Find a Group</b>, if you want to find a group to work with.</p>
-    <p>Otherwise, click on <b>My Buddies</b>, to view your buddies.</p>
+    <h4>Welcome, {{ first_name }} !</h4>
+    <p>Please click on <b>Find Your Buddy</b>, to work with a buddy.</p>
+    <p>Please click on <b>Find Your Group</b>, to work with a group.</p>
+    <p>Please click on <b>My Buddies</b>, to view your buddies.</p>
 </div>
+{% endblock %}
 
-</body>
-</html>
