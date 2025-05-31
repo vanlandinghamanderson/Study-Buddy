@@ -1,30 +1,99 @@
 body {
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents scrolling */
 }
 
-.header {
-    padding: 50px;
-    text-align: center;
-    background-color:#9900cc;
-    border-bottom-style: solid;
-    color: #7a00b8;
+/* Navigation bar styling/changing color */
+.navbar {
+  background-color: #7600a8;
 }
 
-img {
-    width: 500px;
+/* Sets the header name color */
+.navbar .navbar-brand {
+  color: white;
 }
 
-input[type=text], select {
-  width: 30%;
-  padding: 5px 10px;
-  margin: 10px 10px;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: block-box;
+.navbar .navbar-brand:hover {
+  color: white;
+}
+
+/* Carousel container styling */
+.carousel-container {
+  position: relative;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Black tint overlay for the carousel*/
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
 }
 
 
-input[type=submit]:hover {
-  background-color: #45a049;
+/* Carousel images styling*/
+.carousel-inner img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* Logo overlaying */
+.logo-overlay {
+  position: absolute;
+  top: 25%; /* Moves the logo on top*/
+  left: 22%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  animation: grow 2s infinite; /* Apply grow animation */
+  height: auto;
+}
+
+/* Prevent white screen during transitions */
+.carousel-fade .carousel-item {
+  transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+  opacity: 0; /* Start with invisible */
+  position: absolute; /* Prevent stacking issues */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1; /* Ensure it is below the overlay */
+}
+
+.carousel-fade .carousel-item.active {
+  opacity: 1; /* Make active slide visible */
+  position: relative; /* Ensure active slide is visible */
+  z-index: 2;
+}
+
+@keyframes grow {
+  /* Logo grows still */
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* The logo can grow a little bit*/
+  }
+}
+
+/* Button Overlaying style */
+.button-overlay {
+  position: absolute;
+  top: 55%; /* Moves the logo on top*/
+  left: 45%;
+  z-index: 15;
+  text-align: center;
+  animation: grow 2s infinite; /* Apply grow animation */
+  height: auto;
 }
