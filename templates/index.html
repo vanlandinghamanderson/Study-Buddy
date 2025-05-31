@@ -1,24 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container" style="text-align: center;">
-    <br>
-    <h4>Please Enter Your <b>First Name</b>, Your <b>Last Name</b>, and then Select Your <b>Major</b>.</h4>
-    <br>
-    <form action="{{ url_for('submit') }}" method="POST">
-        <label for="first_name">First Name: </label>
-        <input type="text" id="first_name" name="first_name" placeholder="Enter Your First Name: " required>
-        <br>
-        <label for="last_name">Last Name: </label>
-        <input type="text" id="last_name" name="last_name" placeholder="Enter Your Last Name" required>
-        <br>
-        <label for="major">Major: </label>
-        <select name="major" id="major" required>
-            <option class="disabled" value="">Select Your Major</option>
-            <option value="major">Computer Science</option>
-            <option value="major">Software Engineering</option>
-        </select>
-        <br>
-        <button type="submit" input type="button">Submit</button>
-    </form>
-</div>
+
+       <!-- Logo Overlay -->
+       <div class="logo-overlay">
+         <img src="{{ url_for('static', filename='images/ecustudybuddylogo.jpg') }}" alt="Logo">
+       </div>
+
+       <div class="register-button-overlay">
+         <button type="button" class="btn btn-outline-light">Register</button>
+      </div>
+
 {% endblock %}
