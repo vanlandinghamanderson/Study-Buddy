@@ -1,13 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div class="homepage-overlay">
 
-       <!-- Logo Overlay -->
-       <div class="logo-overlay">
-         <img src="{{ url_for('static', filename='images/ecustudybuddylogo.jpg') }}" alt="Logo">
-       </div>
+  <div class="logo-overlay">
+    <img src="{{ url_for('static', filename='images/ecustudybuddylogo.jpg') }}" alt="logo" class="homepage-logo">
+  </div>
+  
+  <div class="vertical_divider"></div>
 
-       <div class="register-button-overlay">
-         <button type="button" class="btn btn-outline-light">Register</button>
-      </div>
-
+  
+  <div class="button-overlay">
+    <div class="homepage-buttons">
+      <a href="#" class="btn-register">Register</a>
+      <a href="#" class="btn-login">Login</a>
+    </div>
+</div>
 {% endblock %}

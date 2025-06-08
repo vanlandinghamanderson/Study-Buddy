@@ -1,99 +1,104 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0; /* Removes the white padding */
+  height: 100vh; /* Full height */
   overflow: hidden; /* Prevents scrolling */
 }
 
-/* Navigation bar styling/changing color */
 .navbar {
-  background-color: #7600a8;
+  background-color: #7400aa !important;
 }
 
-/* Sets the header name color */
-.navbar .navbar-brand {
-  color: white;
-}
-
-.navbar .navbar-brand:hover {
-  color: white;
-}
-
-/* Carousel container styling */
-.carousel-container {
-  position: relative;
-  width: 100%; /* Full width */
-  height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Prevent content overflow */
-}
-
-/* Black tint overlay for the carousel*/
 .carousel-overlay {
-  position: absolute;
+  position: absolute; /* Ensures it overlays the carousel */
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black tint with 50% opacity */
+  z-index: 5;/* Ensures it appears above the carousel images */
 }
 
-
-/* Carousel images styling*/
-.carousel-inner img {
+.homepage-overlay {
+  position: absolute;
+  top: 30%;
+  left: 5%;
   width: 100%;
-  height: 100vh;
-  object-fit: cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-overlay {
+  display: flex;
+  justify-content: center; /* Center the logo horizontally within its container */
+  align-items: center; /* Center the logo vertically */
+  width: 150px; /* Adjust the width of the logo container */
+  height: 150px; /* Adjust the height of the logo container */
+  margin-left: 250px; /* Adjust the left margin to position the logo */
+}
+
+.homepage-logo {
+  width: 450px; /* Adjust the size of the logo */
+  height: auto;
+}
+
+.vertical_divider {
+  position: absolute;
+  top: 50%; /* Centers vertically */
+  left: 50%; /* Centers horizontally */
+  transform: translate(-70%, -50%); /* Adjusts for accurate centering */
+  height: 200px;
+  width: 5px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.homepage-text {
   display: block;
 }
-
-/* Logo overlaying */
-.logo-overlay {
-  position: absolute;
-  top: 25%; /* Moves the logo on top*/
-  left: 22%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  text-align: center;
-  animation: grow 2s infinite; /* Apply grow animation */
-  height: auto;
-}
-
-/* Prevent white screen during transitions */
-.carousel-fade .carousel-item {
-  transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
-  opacity: 0; /* Start with invisible */
-  position: absolute; /* Prevent stacking issues */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: transparent;
-  z-index: 1; /* Ensure it is below the overlay */
-}
-
-.carousel-fade .carousel-item.active {
-  opacity: 1; /* Make active slide visible */
-  position: relative; /* Ensure active slide is visible */
-  z-index: 2;
-}
-
-@keyframes grow {
-  /* Logo grows still */
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1); /* The logo can grow a little bit*/
-  }
-}
-
-/* Button Overlaying style */
 .button-overlay {
-  position: absolute;
-  top: 55%; /* Moves the logo on top*/
-  left: 45%;
-  z-index: 15;
-  text-align: center;
-  animation: grow 2s infinite; /* Apply grow animation */
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Centers the buttons horizontally */
+  margin-right: 250px
+}
+
+.homepage-buttons {
+  display: inline-block;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.homepage-buttons a {
+  padding: 20px 75px; /* Make the buttons however it looks like */
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 25px; /* Space between the buttons */
+  border-radius: 10px;
+  transition: 0.3s;
+  border: 3px solid white;
+  display: block; /* The buttons top of each other */
+}
+  
+
+.homepage-buttons .btn-login {
+  background-color: transparent;
+  color: white;
+}
+
+.homepage-buttons .btn-login:hover {
+  background-color: white;
+  color: purple;
+}
+
+.homepage-buttons .btn-register {
+  background-color: transparent;
+  color: white;
+}
+
+.homepage-buttons .btn-register:hover {
+  background-color: white;
+  color: purple;
 }
