@@ -102,3 +102,75 @@ body {
   background-color: white;
   color: purple;
 }
+
+.register-overlay {
+  position: absolute; /* Ensures it overlays the entire viewport */
+  top: 0; /* If top and left deleted it automatically disapeears */
+  left: 0;
+  width: 70%; /* If those 2 deleted the registraion form pops on the left*/
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Tints the background while the regstration pops up*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  color:#7400aa;
+}
+
+.form-group {
+  color: black;
+}
+
+.btn-primary {
+  background-color: #7400aa;
+  border-color: #7400aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-overlay {
+  position: absolute; /* Ensures it overlays the entire viewport */
+  top: 0; /* If top and left deleted it automatically disapeears */
+  left: 0;
+  width: 100%; /* If those 2 deleted the registraion form pops on the left*/
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Tints the background while the regstration pops up*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 8px;
+  color:#7400aa;
+}
+
+.form-group {
+  color: black;
+}
+
+.btn-primary {
+  background-color: #7400aa;
+  border-color: #7400aa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
